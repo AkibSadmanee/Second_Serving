@@ -3,7 +3,7 @@
   <br>
   <h1 align="center">Second Serving</h1>
 </p>
-
+ 
 <p align="center">
   Connecting food contributors with those in need — Because every food deserves a second chance.
 </p>
