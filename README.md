@@ -154,7 +154,7 @@ The app will be available at `http://localhost:5173`.
 - Rating and feedback system between contributors and receivers
 - Mobile-responsive PWA
 
-## Contributors
+##  Contributors
 
 - Hokulani 26 Team
 
