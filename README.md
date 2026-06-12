@@ -65,7 +65,7 @@ second_serving/
 └── README.md
 ```
 
-## Installation Instructions
+## Installation Instructions 
 
 ### 1. Clone the Repository
 
