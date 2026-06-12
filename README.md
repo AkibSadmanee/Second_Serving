@@ -30,7 +30,9 @@ The landing page features a tree whose canopy fills with leaves and flowers as d
   <img src="./frontend/public/transparenttree.png" alt="Dead Tree represnting current society" height="200px"/>
   
   We start with this wilted tree. The wilted tree represents the substantial amount of food waste and hunger our community faces while others go hungry. But as more people donate food on our website, more leaves and flowers bloom to represent them. We hope to make the tree as bountiful as it can get. 
+</p>
 
+<p align="center">
   <img src="./frontend/public/bountyfultree.png" alt="A full Tree represnting our hope" height="200px"/>
 
   <h4 align="center">Second Serving</h4>
