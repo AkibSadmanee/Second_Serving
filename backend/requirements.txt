@@ -1,0 +1,15 @@
+aiofiles
+aiosqlite
+alembic
+asyncpg
+bcrypt
+fastapi
+openai
+psycopg2-binary
+pydantic-settings
+pydantic[email]
+python-dotenv
+python-jose[cryptography]
+python-multipart
+sqlalchemy
+uvicorn[standard]

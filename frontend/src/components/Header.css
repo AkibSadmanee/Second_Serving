@@ -1,0 +1,278 @@
+/* ── Top nav bar ─────────────────────────────────────────────────────────── */
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 6px;
+  padding: 5% 5% 2% 5%;
+  margin-bottom: 5%;
+  border-radius: 14px;
+  background: linear-gradient(to right, #edfaef 0%, #25522d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.07),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 20px;
+  z-index: 50;
+}
+
+/* ── Left section: logo + welcome text ── */
+
+.topnav-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.topnav-welcome-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.topnav-welcome-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a3320;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topnav-welcome-sub {
+  font-size: 20px;
+  color: rgba(26, 51, 32, 0.62);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Right section: donate + avatar ── */
+
+.topnav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Logo ── */
+
+.topnav-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+.topnav-logo img {
+  height: auto;
+  width: 100px;
+  display: block;
+}
+
+/* ── Nav links ── */
+
+.topnav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.topnav-link {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  margin: 0;
+  line-height: 1;
+}
+
+.topnav-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #111;
+  opacity: 1;
+}
+
+.topnav-link.active {
+  background: rgba(46, 125, 50, 0.09);
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.topnav-donate-btn {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  margin: 0;
+  margin-left: 4px;
+  margin-right: 30px;
+  transition: background 0.15s;
+  line-height: 1;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.topnav-donate-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  opacity: 1;
+}
+
+/* ── User avatar + dropdown ── */
+
+.topnav-user {
+  position: relative;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+.topnav-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.topnav-avatar:hover {
+  background: rgba(255, 255, 255, 0.32);
+  opacity: 1;
+}
+
+.topnav-avatar.open {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* ── Dropdown menu ── */
+
+.topnav-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 224px;
+  background: white;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  z-index: 200;
+  animation: dropdownIn 0.12s ease;
+}
+
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+.topnav-dropdown-info {
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.topnav-dropdown-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topnav-dropdown-email {
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topnav-dropdown-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0;
+}
+
+.topnav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 11px 16px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.1s;
+  border-radius: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.topnav-dropdown-item:hover {
+  background: #f7f7f7;
+  opacity: 1;
+  color: #111;
+}
+
+.topnav-dropdown-signout {
+  color: #c62828;
+}
+
+.topnav-dropdown-signout:hover {
+  background: #fff4f4;
+  color: #c62828;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 640px) {
+  .topnav-welcome-sub { display: none; }
+}
+
+@media (max-width: 480px) {
+  .topnav {
+    top: 10px;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+
+  .topnav-welcome-name { font-size: 14px; }
+
+  .topnav-donate-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+}

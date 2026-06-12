@@ -1,0 +1,234 @@
+/* ── Landing page two-column layout ─────────────────────────────────────── */
+
+.landing-page {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: #F8F9F4;
+}
+
+.landing-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Left: tree panel ────────────────────────────────────────────────────── */
+
+.tree-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #e8f5e9 0%, #c8e6c9 50%, #dcedc8 100%);
+  overflow: hidden;
+}
+
+.tree-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* Invisible SVG — defines canopy zones for spawn math only */
+.canopy-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tree-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 88%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Leaves */
+.canopy-leaf {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: leafSway 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes leafSway {
+  0%   { transform: translate(-50%, -50%) rotate(0deg); }
+  33%  { transform: translate(-50%, -55%) rotate(8deg); }
+  66%  { transform: translate(-48%, -52%) rotate(-4deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Flowers */
+.canopy-flower {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: flowerBob 4s ease-in-out infinite;
+}
+
+@keyframes flowerBob {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -56%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Bottom bar */
+.sim-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px 18px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(46, 125, 50, 0.12);
+  flex-shrink: 0;
+}
+
+.sim-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 3px 10px rgba(46, 125, 50, 0.28);
+}
+
+.sim-btn:hover  { background: #1b5e20; opacity: 1; }
+.sim-btn:active { transform: scale(0.97); }
+
+.sim-note {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.sim-note strong {
+  color: #2e7d32;
+}
+
+/* ── Right: login panel ───────────────────────────────────────────────────── */
+
+.login-panel {
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 40px;
+  background: #ffffff;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.07);
+  overflow-y: auto;
+}
+
+.login-panel-inner {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  width: 240px;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.login-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+  align-self: flex-start;
+}
+
+.login-error {
+  color: #c62828;
+  font-size: 14px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.login-panel form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-panel input {
+  width: 100%;
+  margin: 6px 0;
+}
+
+.login-submit-btn {
+  width: 100%;
+  margin: 12px 0 0;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.login-panel .forgot-link {
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.login-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+.login-panel-signup {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.signup-action-btn {
+  width: 100%;
+  margin: 0;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .landing-page  { height: auto; min-height: 100vh; }
+  .landing-main  { flex-direction: column; height: auto; }
+  .tree-panel    { height: 55vh; flex: none; }
+  .login-panel   { width: 100%; padding: 32px 24px; box-shadow: 0 -4px 20px rgba(0,0,0,0.06); }
+}
