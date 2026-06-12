@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Connecting food contributors with those in need — turning surplus into sustenance.
+  Connecting food contributors with those in need — Because every food deserves a second chance.
 </p>
 
 # Overview
