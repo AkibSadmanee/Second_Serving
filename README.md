@@ -24,7 +24,18 @@ Registered receivers browse all available food listings with live filtering by d
 JWT-based auth supports two distinct user roles — `contributor` and `receiver` — each with separate registration flows and protected routes. Password reset via email is supported.
 
 ### 4. Living Tree Visualization
-The landing page features an animated tree whose canopy fills with leaves and flowers as donations accumulate, providing an engaging visual representation of community impact.
+The landing page features a tree whose canopy fills with leaves and flowers as donations accumulate, providing an engaging visual representation of community impact.
+
+<p align="center">
+  <img src="./frontend/public/transparenttree.png" alt="Dead Tree represnting current society" height="200px"/>
+  
+  We start with this wilted tree. The wilted tree represents the substantial amount of food waste and hunger our community faces while others go hungry. But as more people donate food on our website, more leaves and flowers bloom to represent them. We hope to make the tree as bountiful as it can get. 
+
+  <img src="./frontend/public/bountifultree.png" alt="Dead Tree represnting current society" height="200px"/>
+
+  <h4 align="center">Second Serving</h4>
+
+</p>
 
 ## Folder Structure
 
