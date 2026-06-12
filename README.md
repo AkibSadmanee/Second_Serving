@@ -34,10 +34,8 @@ The landing page features a tree whose canopy fills with leaves and flowers as d
 
 <p align="center">
   <img src="./frontend/public/bountyfultree.png" alt="A full Tree represnting our hope" height="200px"/>
-
-  <h4 align="center">Second Serving</h4>
-
 </p>
+
 
 ## Folder Structure
 
