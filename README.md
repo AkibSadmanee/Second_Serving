@@ -134,7 +134,7 @@ The app will be available at `http://localhost:5173`.
 **Frontend**
 - React 19 + React Router v7
 - Vite + Tailwind CSS
-- Role-based protected routes
+- Role-based protected routes 
 
 ## Features
 
